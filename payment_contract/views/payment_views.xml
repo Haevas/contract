@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 HAEVAS
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+<data>
+
+    <record model="ir.ui.view" id="acquirer_form_inherited">
+        <!-- <field name="name">payment.acquirer.form (in payment_contract)</field> -->
+        <field name="name">payment.acquirer.form.auto_invoice</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <field name="auto_confirm" position="after">
+                <field name="auto_confirm_invoice" widget="radio"/>
+            </field>
+        </field>
+    </record>
+
+            <!--
+    <record model="ir.ui.view" id="payment_acquirer_search_view">
+        <field name="name">payment.acquirer.search (in payment_contract)</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="TODO othermodule.search_view"/>
+        <field name="arch" type="xml">
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="payment_acquirer_tree_view">
+        <field name="name">payment.acquirer.tree (in payment_contract)</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="TODO othermodule.tree_view"/>
+        <field name="arch" type="xml">
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="payment_acquirer_act_window">
+        <field name="name">Payment Acquirer</field> <!-- TODO -->
+<!--
+        <field name="res_model">payment.acquirer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="payment_acquirer_menu">
+        <field name="name">Payment Acquirer</field>
+        <field name="parent_id" ref="xmlid of parent menu"/> <!-- TODO -->
+<!--
+        <field name="action" ref="payment_acquirer_act_window"/>
+        <field name="sequence" eval="16"/> <!-- TODO -->
+<!--
+    </record>
+            -->
+</data>
+</odoo>
