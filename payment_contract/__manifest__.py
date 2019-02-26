@@ -11,7 +11,11 @@
     'author': 'HAEVAS,Odoo Community Association (OCA)',
     'website': 'http://haevas.com',
     'depends': [
+<<<<<<< HEAD
         'contract_payment_auto'
+=======
+        'contract_auto'
+>>>>>>> e400f125888b5c61bc1150974d335337fa37120d
     ],
     'data': [
 #        'security/payment_acquirer.xml',

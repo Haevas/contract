@@ -54,7 +54,11 @@ class PaymentTransaction(models.Model):
     def form_feedback(self, data, acquirer_name):
         """ Override to confirm the sale order, if defined, and if the transaction
         is done. """
+<<<<<<< HEAD
         # import ipdb; ipdb.set_trace() # BREAKPOINT
+=======
+        import ipdb; ipdb.set_trace() # BREAKPOINT
+>>>>>>> e400f125888b5c61bc1150974d335337fa37120d
         tx = None
         res = super(PaymentTransaction, self).form_feedback(data, acquirer_name)
 
@@ -62,7 +66,11 @@ class PaymentTransaction(models.Model):
         tx_find_method_name = '_%s_form_get_tx_from_data' % acquirer_name
         if hasattr(self, tx_find_method_name):
             tx = getattr(self, tx_find_method_name)(data)
+<<<<<<< HEAD
         # _logger.info('<%s> transaction processed: tx ref:%s, tx amount: %s', acquirer_name, tx.reference if tx else 'n/a', tx.amount if tx else 'n/a')
+=======
+        _logger.info('<%s> transaction processed: tx ref:%s, tx amount: %s', acquirer_name, tx.reference if tx else 'n/a', tx.amount if tx else 'n/a')
+>>>>>>> e400f125888b5c61bc1150974d335337fa37120d
 
         if tx:
             # Auto-confirm SO if necessary

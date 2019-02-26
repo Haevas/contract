@@ -30,7 +30,11 @@ class AccountAnalyticAccount(models.Model):
         self.ensure_one()
         invoice.ensure_one()
         invoice.action_invoice_open()
+<<<<<<< HEAD
         # import ipdb; ipdb.set_trace() # BREAKPOINT
+=======
+        import ipdb; ipdb.set_trace() # BREAKPOINT
+>>>>>>> e400f125888b5c61bc1150974d335337fa37120d
         self._send_invoice_message(invoice)
         paid = self._pay_invoice(invoice)
 
